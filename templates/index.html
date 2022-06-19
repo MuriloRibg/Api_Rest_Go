@@ -1,0 +1,55 @@
+{{define "index"}}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loja</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <nav class="navbar bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="/imgs/transferir.jpeg" alt="logo alura" width="30" height="24" class="d-inline-block align-text-top">
+            Loja Alura
+          </a>
+        </div>
+      </nav>
+</nav>
+
+<body>
+  <div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Preço</th>
+            <th scope="col">Quantidade</th>
+          </tr>
+        </thead>
+        <tbody>
+        <!-- Dando um forEach -->
+        {{range .}}
+          <tr>
+            <th scope="row">1</th>
+            <td>{{.Nome}}</td>
+            <td>{{.Descricao}}</td>
+            <td>{{.Preco}}</td>
+            <td>{{.Quantidade}}</td>
+          </tr>
+          {{end}}
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
+{{end}}
