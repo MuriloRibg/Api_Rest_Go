@@ -4,7 +4,6 @@ import (
 	"database/sql"
 	"fmt"
 	_ "github.com/go-sql-driver/mysql"
-	"time"
 )
 
 func ConectaMySQL() *sql.DB {
@@ -14,8 +13,6 @@ func ConectaMySQL() *sql.DB {
 	if err != nil {
 		panic(err.Error())
 	}
-	db.SetConnMaxLifetime(time.Minute * 5)
-	db.SetMaxOpenConns(10)
-	db.SetMaxIdleConns(10)
+
 	return db
 }
